@@ -1,4 +1,4 @@
-package com.example.root.myapplication;
+package com.example.root.Attendo;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;

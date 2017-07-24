@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll Number"
+            android:id="@+id/rollnumc"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/namec"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <CheckedTextView
+        android:id="@+id/checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:padding="10dp"
-        android:id="@+id/checkbox"
-    />
+        android:gravity="end"
+        android:padding="10dp">
+
+    </CheckedTextView>
+</LinearLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="title_activity_insert__data">Insert_Data</string>
+    <string name="title_activity_get__dat">Get_DATA</string>
 </resources>

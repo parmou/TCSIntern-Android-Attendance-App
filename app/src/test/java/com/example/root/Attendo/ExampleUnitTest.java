@@ -1,4 +1,4 @@
-package com.example.root.myapplication;
+package com.example.root.Attendo;
 
 import org.junit.Test;
 

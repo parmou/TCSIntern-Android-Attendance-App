@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.root.myapplication">
+    package="com.example.root.Attendo">
 
     <application
         android:allowBackup="true"
@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Welcome">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.example.root.Attendo.MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
         </activity>
-        <activity android:name=".DateTImePicker" />
-        <activity android:name=".Attendance"></activity>
+        <activity android:name="com.example.root.Attendo.Welcome" ></activity>
+        <activity android:name="com.example.root.Attendo.DateTImePicker" />
+        <activity android:name="com.example.root.Attendo.Attendance" />
+        <activity android:name="com.example.root.Attendo.Database" />
+        <activity android:name="com.example.root.Attendo.ViewDB"></activity>
     </application>
 
 </manifest>
