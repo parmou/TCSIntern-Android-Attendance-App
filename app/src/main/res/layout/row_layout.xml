@@ -26,11 +26,12 @@
 
     <CheckedTextView
         android:id="@+id/checkbox"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:gravity="end"
-        android:padding="10dp">
+        android:paddingTop="20dp" >
 
     </CheckedTextView>
 </LinearLayout>

@@ -5,58 +5,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.root.Attendo.Database">
+    tools:context="com.example.root.Attendo.AddData">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Roll Number :"
-            android:padding="10dp"/>
+            android:text="Roll Number"
+            android:padding="10dp" />
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:id="@+id/rollnumber"/>
+            android:id="@+id/lrollnumber"
+            android:padding="10dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name :"
-            android:padding="10dp"/>
+            android:text="Name"
+            android:padding="10dp" />
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:id="@+id/name"/>
+            android:id="@+id/lname"
+            android:padding="10dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Surname :"
-            android:padding="10dp"/>
+            android:text="Branch"
+            android:padding="10dp" />
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:id="@+id/surname"/>
+            android:id="@+id/lbranch"
+            android:padding="10dp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:padding="10dp" />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lsem"
+            android:padding="10dp" />
+    </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
-        android:padding="10dp"
-        android:id="@+id/addintodb"
-        android:onClick="addindb"/>
+        android:text="ADD"
+        android:id="@+id/addintodb"/>
+
 </LinearLayout>

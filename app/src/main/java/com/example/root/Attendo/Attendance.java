@@ -13,96 +13,42 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.root.Attendo.Data.StudentContract;
+import com.example.root.Attendo.Data.StudentDbHelper;
+import com.example.root.Attendo.StudentCursorAdaptor;
+
 import java.util.ArrayList;
 
-public class Attendance extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class Attendance extends AppCompatActivity {
 
-    ArrayList <String> checkedOnes = new ArrayList<>();
-    ArrayList <String> notCheckedOnes = new ArrayList<>();
+    /*ArrayList <String> checkedOnes = new ArrayList<>();
+    ArrayList <String> notCheckedOnes = new ArrayList<>();*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
-        ListView studentlist = (ListView) findViewById(R.id.studentname);
-        SQLiteDatabase db = openOrCreateDatabase("StudentData", MODE_APPEND, null);
-        Cursor cursor = db.rawQuery("select * from Sample_01", null);
-        CursorAdapter myCursorAdapter = new MyCursorAdapter(this, cursor, 0);
-        studentlist.setAdapter(myCursorAdapter);
-     //   studentlist.setOnItemClickListener(this);
-
-       /* student.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        String students[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.row_layout, R.id.checkbox , students);
-        student.setAdapter(adapter);
-
-        student.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String selected = ((TextView)view).getText().toString();
-                if (checkedOnes.contains(selected)) {
-                    checkedOnes.remove(selected);
-                } else
-                    checkedOnes.add(selected);
-            }
-        });
-    }
-        public void ShowPresent(View view){
-            String Present =" ";
-            for (String presenttemp:checkedOnes) {
-                Present +=  presenttemp + "\n";
-            }
-                Toast.makeText(this,"present\n"+Present,Toast.LENGTH_LONG).show();
-*/
-        }
-
-    class MyCursorAdapter extends CursorAdapter {
-
-        public MyCursorAdapter(Context context, Cursor cursor, int flags) {
-            super(context,cursor,flags);
-        }
-
-        @Override
-        public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
-            LayoutInflater inflator = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            View v  = inflator.inflate(R.layout.row_layout,viewGroup,false);
-            return  v;
-        }
-
-        @Override
-        public void bindView(View view, Context context, Cursor cursor) {
-
-            TextView Rollname =(TextView)view.findViewById(R.id.rollnumc);
-            TextView name =(TextView)view.findViewById(R.id.namec);
-            String rollnum = cursor.getString(cursor.getColumnIndex("RollNumber"));
-            String na1 = cursor.getString(cursor.getColumnIndex("Name"));
-            Rollname.setText(rollnum);
-            name.setText(na1);
-
-
-        }
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        displayDatabaseInfo();
 
     }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
+    private void displayDatabaseInfo() {
+        ListView displayall = (ListView)findViewById(R.id.studentdisplay);
+        StudentDbHelper mdb = new StudentDbHelper(this);
+        SQLiteDatabase db = mdb.getWritableDatabase();
+
+        String[] projection = {
+                StudentContract.StudentEntry._ID,
+                StudentContract.StudentEntry.ROLL_NUMBER,
+                StudentContract.StudentEntry.STUDENT_NAME
+        };
+        Cursor cursor = db.query(StudentContract.StudentEntry.TABLE_NAME,projection, null, null,null,null,null);
+
+        StudentCursorAdaptor adaptor = new StudentCursorAdaptor(this,cursor);
+        displayall.setAdapter(adaptor);
 
     }
-
-
 
 }
-    /*    public void ShowAbsent(View view){
-            String Absent = " ";
-            for (String absent:(notCheckedOnes)){
-                Absent += absent + "\n";
-            }
-                Toast.makeText(this,"Absent\n" + Absent, Toast.LENGTH_LONG).show();
-        }*/
-
 
 
 

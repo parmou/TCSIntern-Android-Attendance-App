@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.root.Attendo.MainActivity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
-            <category android:name="android.intent.category.LAUNCHER"/>
-        </intent-filter>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name="com.example.root.Attendo.Welcome" ></activity>
-        <activity android:name="com.example.root.Attendo.DateTImePicker" />
-        <activity android:name="com.example.root.Attendo.Attendance" />
-        <activity android:name="com.example.root.Attendo.Database" />
-        <activity android:name="com.example.root.Attendo.ViewDB"></activity>
+        <activity android:name=".Welcome" />
+        <activity android:name=".DateTImePicker" />
+        <activity android:name=".Attendance" />
+        <activity android:name=".AddData"></activity>
     </application>
 
 </manifest>

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(new Intent(MainActivity.this,Welcome.class));
                                 break;
                             case 1:
-                                startActivity(new Intent(MainActivity.this,Database.class));
+                                startActivity(new Intent(MainActivity.this,AddData.class));
                         }
 
                     }
