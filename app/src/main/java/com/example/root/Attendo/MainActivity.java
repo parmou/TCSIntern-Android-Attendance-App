@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
                     @Override
                     public void onMenuSelected(int index) {
-                        Toast.makeText(MainActivity.this, Option[index],Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(MainActivity.this, Option[index],Toast.LENGTH_SHORT).show();
                         switch (index){
                             case 0:
                                 startActivity(new Intent(MainActivity.this,Welcome.class));
@@ -37,13 +37,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-/*
-        Spinner spinner;
-        String path[] = {"abc","bcd"};
-
-        ArrayAdapter <String> adaptor = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,path);
-        spinner = (Spinner)findViewById(R.id.branch);
-        spinner.setAdapter(adaptor);*/
     }
 
 }

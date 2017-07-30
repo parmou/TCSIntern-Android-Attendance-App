@@ -4,12 +4,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:descendantFocusability="blocksDescendants">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,15 +25,13 @@
             android:id="@+id/namec"
             android:padding="10dp"/>
     </LinearLayout>
-
-    <CheckedTextView
-        android:id="@+id/checkbox"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
+    <CheckBox
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:gravity="end"
-        android:paddingTop="20dp" >
+        android:id="@+id/checkb"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        />
 
-    </CheckedTextView>
+
 </LinearLayout>

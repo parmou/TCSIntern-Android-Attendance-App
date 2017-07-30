@@ -17,9 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Welcome" />
-        <activity android:name=".DateTImePicker" />
         <activity android:name=".Attendance" />
-        <activity android:name=".AddData"></activity>
+        <activity android:name=".AddData" />
+        <activity android:name=".Export" />
+        <activity android:name=".datatime2" />
+        <activity android:name=".timopicker"></activity>
     </application>
 
 </manifest>

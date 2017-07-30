@@ -42,4 +42,5 @@ public class StudentCursorAdaptor extends CursorAdapter {
         nameTextView.setText(name);
 
     }
+
 }
