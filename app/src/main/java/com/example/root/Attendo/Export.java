@@ -45,7 +45,8 @@ public class Export extends AppCompatActivity {
         StringBuilder sb = new StringBuilder();
         for (String s : PresentOnes) {
             sb.append(s);
-            sb.append("\t" + "\n");
+            sb.append(" - Present");
+            sb.append("\n");
         }
 
         final String finalize = sb.toString();

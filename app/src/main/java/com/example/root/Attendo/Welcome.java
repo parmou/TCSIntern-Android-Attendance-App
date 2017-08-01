@@ -25,11 +25,18 @@ public class Welcome extends AppCompatActivity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        Intent welcometech = getIntent();
+        String tname = welcometech.getStringExtra("teacherdata");
+
+        TextView teachername = (TextView)findViewById(R.id.welcometeachername);
+        teachername.setText(tname);
+
         spinner = (Spinner)findViewById(R.id.branch);
         ArrayAdapter<String> adaptor = new ArrayAdapter<String>(Welcome.this,android.R.layout.simple_spinner_dropdown_item,path);
         adaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adaptor);
         spinner.setOnItemSelectedListener(this);
+
     }
 
     @Override

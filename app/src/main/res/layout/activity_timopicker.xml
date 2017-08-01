@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.root.Attendo.timopicker">
 
     <TextView
+        android:padding="10dp"
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:text="Select Time"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/set_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="180dp"
-        android:onClick="setTime"
-        android:theme="@style/MyButton"
-        android:text="NEXT" />
-
     <TimePicker
         android:id="@+id/timePicker1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/set_button"
-        android:paddingTop="30dp"
+        android:paddingTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp" />
+    <Button
+        android:id="@+id/set_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="setTime"
+        android:theme="@style/MyButton"
+        android:text="NEXT" />
 
 
     <!--
@@ -49,4 +48,4 @@
         android:layout_alignStart="@+id/textView2" />
 
      -->
-</RelativeLayout>
+</LinearLayout>

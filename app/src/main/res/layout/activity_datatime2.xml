@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.root.Attendo.datatime2"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    >
 
 
     <TextView
@@ -14,15 +15,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SELECT DATE"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_gravity="center"/>
 
     <DatePicker
         android:id="@+id/datePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="334dp"
+        android:layout_height="362dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_weight="1"
+        android:layout_weight="0.50"
         android:visibility="visible">
 
     </DatePicker>

@@ -30,6 +30,7 @@ public class Attendance extends AppCompatActivity {
     ListView displayall ;
     String passvlues4;
     ArrayList<String> PresentOnes = new ArrayList<String>();
+    CheckBox ch;
 
     //CheckedTextView ch = (CheckedTextView)findViewById(R.id.checkboxxx);
     @Override
@@ -37,6 +38,9 @@ public class Attendance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
         displayall = (ListView)findViewById(R.id.studentdisplay);
+     //   ch = ((CheckBox)findViewById(R.id.checkb));
+       // ch.setClickable(false);
+
 
 
 
@@ -45,14 +49,16 @@ public class Attendance extends AppCompatActivity {
         displayall.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                 CheckBox ch = (CheckBox)view.findViewById(R.id.checkb);
                 ch.setChecked(!ch.isChecked());
 
+
                 Cursor cursor1 = (Cursor)displayall.getItemAtPosition(i);
-                String abc = cursor1.getString(cursor1.getColumnIndexOrThrow(StudentContract.StudentEntry.STUDENT_NAME));
+                String studentName = cursor1.getString(cursor1.getColumnIndexOrThrow(StudentContract.StudentEntry.STUDENT_NAME));
+                String studentRoll = cursor1.getString(cursor1.getColumnIndexOrThrow(StudentContract.StudentEntry.ROLL_NUMBER));
+                String studentName1 = studentName + " (" + studentRoll + ") ";
                // Toast.makeText(getApplicationContext(),abc + "is Present",Toast.LENGTH_SHORT).show();
-                PresentOnes.add(abc);
+                PresentOnes.add(studentName1);
 
             }
         });
@@ -88,7 +94,7 @@ public class Attendance extends AppCompatActivity {
 
                 Intent datetime = getIntent();
                 String passvalues4 = datetime.getStringExtra("passvalues3");
-           //     Toast.makeText(Attendance.this,passvalues4,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Attendance.this,passvalues4,Toast.LENGTH_SHORT).show();
 
                 Intent export = new Intent(Attendance.this, Export.class);
                 export.putStringArrayListExtra("PresentOnes",PresentOnes);

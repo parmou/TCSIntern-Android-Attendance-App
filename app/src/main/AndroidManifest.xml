@@ -10,18 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Welcome" />
         <activity android:name=".Attendance" />
         <activity android:name=".AddData" />
         <activity android:name=".Export" />
         <activity android:name=".datatime2" />
-        <activity android:name=".timopicker"></activity>
+        <activity android:name=".timopicker" />
+        <activity android:name=".TeacherInput">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

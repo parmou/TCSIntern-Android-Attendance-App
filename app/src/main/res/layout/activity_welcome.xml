@@ -5,70 +5,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.root.Attendo.Welcome">
+    android:padding="40dp"
+    tools:context="com.example.root.Attendo.Welcome"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_weight="0.09">
         <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="Teacher Name"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+
+            android:id="@+id/welcometeachername"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Plea"/>
+            android:textAllCaps="true"
+            android:text=" Plaease Select Branch and Subject"
+            style="@style/CategoryStyle"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:textAllCaps="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:text="Parvesh"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="100dp"
-        android:id="@+id/name"/>
-    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="100dp"
+            android:textColor="@android:color/tertiary_text_light"
+            android:background="@color/backcolor"
+            android:padding="10dp"
+            android:gravity="center"
             android:text="Branch"/>
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="100dp"
-            android:id="@+id/branch">
+            android:id="@+id/branch"
+            android:gravity="center">
         </Spinner>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="100dp"
+            android:textColor="@android:color/tertiary_text_light"
+            android:background="@color/backcolor"
+            android:padding="10dp"
             android:text="Subject"/>
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="100dp"
             android:id="@+id/subject">
         </Spinner>
     </LinearLayout>
@@ -80,8 +103,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
         android:textColor="@color/white"
         android:text="Next"
         android:theme="@style/MyButton"

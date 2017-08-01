@@ -7,4 +7,6 @@
     <color name="indigo">#4B0082</color>
     <color name="white">#ffffff</color>
     <color name="backcolor">#b6eaf2</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

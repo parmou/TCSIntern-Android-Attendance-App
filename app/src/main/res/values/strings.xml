@@ -2,4 +2,8 @@
     <string name="app_name">Attendo</string>
     <string name="title_activity_insert__data">Insert_Data</string>
     <string name="title_activity_get__dat">Get_DATA</string>
+
+    <string name="title_activity_teacher_input">TeacherInput</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
